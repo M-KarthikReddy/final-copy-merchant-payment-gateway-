@@ -1,0 +1,30 @@
+<h4>Payment</h4>
+
+<div class="form">
+    <div class="form-control">
+        <label>Merchant Id</label>
+        <input type="text" [(ngModel)]="merchantId" placeholder="Merchant Id" />
+    </div>
+    <div class="form-control">
+        <label>Amount</label>
+        <input type="text" [(ngModel)]="amount" placeholder="Amount" />
+    </div>
+    <div class="form-control">
+        <label>currency</label>
+        <input type="text" [(ngModel)]="currency" placeholder="currency" />
+    </div>
+    
+
+
+    <button type="button" (click)="makePayment()">Submit</button>
+
+    <ul class="payment-status" *ngIf="paymentStatus">
+        <li><label>Merchant Id</label> {{paymentStatus.merchantId}}</li>
+        <li><label>transaction Id</label> {{paymentStatus.transactionId}}</li>
+        <li><label>Status</label> {{paymentStatus.status}}</li>
+        <li><label>Order Id</label> {{paymentStatus.orderId}}</li>
+        <li><label>Amount</label> {{paymentStatus.amount}}</li>
+    </ul>
+
+
+</div>

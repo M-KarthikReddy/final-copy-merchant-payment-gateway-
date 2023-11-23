@@ -1,0 +1,12 @@
+<h4>Enter transaction Id</h4>
+<div class="track"><input type="text" name="track" placeholder="Enter transaction id" [(ngModel)]="merchantId" /></div>
+<br>
+<button type="button" (click)="trackStatus()">Track Status</button>
+
+<ul class="payment-info" *ngIf="paymentResponse">
+    <li><label>Merchant Id</label> {{paymentResponse.merchantId}}</li>
+    <li><label>transaction Id</label> {{paymentResponse.transactionId}}</li>
+    <li><label>Status</label> {{paymentResponse.status}}</li>
+    <li><label>Order Id</label> {{paymentResponse.orderId}}</li>
+    <li><label>Amount</label> {{paymentResponse.amount}}</li>
+</ul>
